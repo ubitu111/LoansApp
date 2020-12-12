@@ -102,8 +102,9 @@ class CreateLoanFragment : Fragment(R.layout.create_loan_fragment) {
     }
 
     override fun onSaveInstanceState(outState: Bundle) {
-        outState.putFloat(BUNDLE_SLIDER_VALUE, sliderMaxAmount.value)
+        if (sliderMaxAmount != null) {
+            outState.putFloat(BUNDLE_SLIDER_VALUE, sliderMaxAmount.value)
+        }
         super.onSaveInstanceState(outState)
-
     }
 }
