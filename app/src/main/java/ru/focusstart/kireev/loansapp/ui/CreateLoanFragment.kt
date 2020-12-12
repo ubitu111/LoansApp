@@ -88,7 +88,7 @@ class CreateLoanFragment : Fragment(R.layout.create_loan_fragment) {
         ) {
             viewModel.createLoan(
                 LoanRequest(
-                    textViewMaxAmount.text.toString().toInt(),
+                    textViewMaxAmount.text.toString().toFloat().toInt(),
                     editTextFirstName.text.toString(),
                     editTextLastName.text.toString(),
                     textViewPercent.text.toString().toDouble(),
