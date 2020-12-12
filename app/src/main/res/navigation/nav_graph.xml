@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/registrationFragment">
+
+    <fragment
+        android:id="@+id/registrationFragment"
+        android:name="ru.focusstart.kireev.loansapp.ui.EntryFragment"
+        android:label="login_fragment"
+        tools:layout="@layout/entry_fragment" >
+        <action
+            android:id="@+id/action_registrationFragment_to_listLoansFragment"
+            app:destination="@id/listLoansFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/listLoansFragment"
+        android:name="ru.focusstart.kireev.loansapp.ui.ListLoansFragment"
+        android:label="list_loans_fragment"
+        tools:layout="@layout/list_loans_fragment" >
+        <action
+            android:id="@+id/action_listLoansFragment_to_createLoanFragment"
+            app:destination="@id/createLoanFragment" />
+        <action
+            android:id="@+id/action_listLoansFragment_to_detailLoanInfoFragment"
+            app:destination="@id/detailLoanInfoFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/createLoanFragment"
+        android:name="ru.focusstart.kireev.loansapp.ui.CreateLoanFragment"
+        android:label="create_loan_fragment"
+        tools:layout="@layout/create_loan_fragment" >
+        <action
+            android:id="@+id/action_createLoanFragment_to_successLoanCreatedInfoFragment"
+            app:destination="@id/successLoanCreatedInfoFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/successLoanCreatedInfoFragment"
+        android:name="ru.focusstart.kireev.loansapp.ui.SuccessLoanCreatedInfoFragment"
+        android:label="fragment_success_loan_created_info"
+        tools:layout="@layout/fragment_success_loan_created_info" >
+        <action
+            android:id="@+id/action_successLoanCreatedInfoFragment_to_listLoansFragment"
+            app:destination="@id/listLoansFragment"
+            app:popUpTo="@+id/listLoansFragment"
+            app:popUpToInclusive="true"/>
+    </fragment>
+    <fragment
+        android:id="@+id/detailLoanInfoFragment"
+        android:name="ru.focusstart.kireev.loansapp.ui.DetailLoanInfoFragment"
+        android:label="detail_loan_info_fragment"
+        tools:layout="@layout/detail_loan_info_fragment" >
+        <action
+            android:id="@+id/action_detailLoanInfoFragment_to_listLoansFragment"
+            app:destination="@id/listLoansFragment"
+            app:popUpTo="@+id/listLoansFragment"
+            app:popUpToInclusive="true"/>
+        <argument
+            android:name="loanId"
+            app:argType="long"
+            android:defaultValue="0L" />
+    </fragment>
+</navigation>

@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layoutDetailInfo"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.DetailLoanInfoFragment">
+
+    <ProgressBar
+        android:id="@+id/detailInfoProgressBar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/detailTextViewLabelLoanInfo"
+        app:fontFamily="@font/akzentica4f_bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:text="@string/loan_information"
+        android:textColor="@color/primary"
+        android:textSize="24sp" />
+
+    <ImageView
+        android:id="@+id/imageViewStateLoan"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_margin="8dp"
+        app:layout_constraintTop_toBottomOf="@+id/detailTextViewLabelLoanInfo"
+        tools:src="@drawable/registered"
+        android:layout_width="150dp"
+        android:layout_height="150dp" />
+
+    <TextView
+        android:id="@+id/detailTextViewLabelFullName"
+        style="@style/DetailLoanTextView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/detailTextViewLabelLoanInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/recipient"
+        android:textColor="@color/primary" />
+
+    <TextView
+        android:id="@+id/detailTextViewFullName"
+        style="@style/DetailLoanTextView"
+        app:layout_constraintStart_toEndOf="@+id/detailTextViewLabelFullName"
+        app:layout_constraintTop_toBottomOf="@+id/detailTextViewLabelLoanInfo"
+        tools:text="Сидоров Антон"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/detailTextViewLabelPhoneNumber"
+        style="@style/DetailLoanTextView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/detailTextViewLabelFullName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/phone"
+        android:textColor="@color/primary" />
+
+    <TextView
+        android:id="@+id/detailTextViewPhoneNumber"
+        style="@style/DetailLoanTextView"
+        app:layout_constraintStart_toEndOf="@+id/detailTextViewLabelPhoneNumber"
+        app:layout_constraintTop_toBottomOf="@+id/detailTextViewFullName"
+        tools:text="89539586363"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/detailTextViewLabelAmount"
+        style="@style/DetailLoanTextView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/detailTextViewLabelPhoneNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/loan_amount"
+        android:textColor="@color/primary" />
+
+    <TextView
+        android:id="@+id/detailTextViewAmount"
+        style="@style/DetailLoanTextView"
+        app:layout_constraintStart_toEndOf="@+id/detailTextViewLabelAmount"
+        app:layout_constraintTop_toBottomOf="@+id/detailTextViewPhoneNumber"
+        tools:text="20000"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        style="@style/DetailLoanTextView"
+        app:layout_constraintStart_toEndOf="@+id/detailTextViewAmount"
+        app:layout_constraintTop_toBottomOf="@+id/detailTextViewPhoneNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/symbol_rur" />
+
+    <TextView
+        android:id="@+id/detailTextViewLabelDate"
+        style="@style/DetailLoanTextView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/detailTextViewLabelAmount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/loan_date"
+        android:textColor="@color/primary" />
+
+    <TextView
+        android:id="@+id/detailTextViewDate"
+        style="@style/DetailLoanTextView"
+        app:layout_constraintStart_toEndOf="@+id/detailTextViewLabelDate"
+        app:layout_constraintTop_toBottomOf="@+id/detailTextViewAmount"
+        tools:text="28.11.2020"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/detailTextViewLabelPeriod"
+        style="@style/DetailLoanTextView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/detailTextViewLabelDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/loan_period"
+        android:textColor="@color/primary" />
+
+    <TextView
+        android:id="@+id/detailTextViewPeriod"
+        style="@style/DetailLoanTextView"
+        app:layout_constraintStart_toEndOf="@+id/detailTextViewLabelPeriod"
+        app:layout_constraintTop_toBottomOf="@+id/detailTextViewDate"
+        tools:text="45"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        style="@style/DetailLoanTextView"
+        app:layout_constraintStart_toEndOf="@+id/detailTextViewPeriod"
+        app:layout_constraintTop_toBottomOf="@+id/detailTextViewDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/symbol_days" />
+
+    <TextView
+        android:id="@+id/detailTextViewLabelPercent"
+        style="@style/DetailLoanTextView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/detailTextViewLabelPeriod"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/loan_percent"
+        android:textColor="@color/primary" />
+
+    <TextView
+        android:id="@+id/detailTextViewPercent"
+        style="@style/DetailLoanTextView"
+        app:layout_constraintStart_toEndOf="@+id/detailTextViewLabelPercent"
+        app:layout_constraintTop_toBottomOf="@+id/detailTextViewPeriod"
+        tools:text="23"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        style="@style/DetailLoanTextView"
+        app:layout_constraintStart_toEndOf="@+id/detailTextViewPercent"
+        app:layout_constraintTop_toBottomOf="@+id/detailTextViewPeriod"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/symbol_percent" />
+
+    <TextView
+        android:id="@+id/detailTextViewDescription"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/detailTextViewLabelPercent"
+        tools:text="Поздравляем, Ваша заявка была одобрена! Получить деньги можно в пункте выдачи."
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="18dp"
+        android:textColor="@color/primary"
+        android:textSize="24sp" />
+
+    <Button
+        android:id="@+id/detailButtonOk"
+        style="?attr/materialButtonOutlinedStyle"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/detailTextViewDescription"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/label_understand" />
+</androidx.constraintlayout.widget.ConstraintLayout>
